@@ -21,14 +21,43 @@
 <body>
 
 	<div id="root"></div>		
-	 <script type="text/babel">
-		const App = () =>{
-			return(
+		<script type="text/babel">
+			const App = () =>{
+				const name =  "Guillermo"
+				let age = 34
+				return(
 				<div>
-					<h1>React Again</h1>	
+					<h1>👽Soy {name} y tengo {age} años👽
+					</h1>
+					<br/>
+					<Article/>	
 				</div>
-			);
-		};
+			)
+		}
+		const Article =()=>{
+			const articles = [{
+				titulo: "Mi primer articulo",
+				body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, iusto atque. Suscipit optio quisquam unde necessitatibus distinctio, recusandae veniam eos tempore in molestias a numquam asperiores commodi voluptatum pariatur assumenda! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium omnis reprehenderit tempore architecto, quidem deserunt vero, id aliquid officia odit quasi maxime laboriosam quia, sunt deleniti cum nemo commodi.",
+				autor: "Guillermo",
+				id: "1",
+			},
+		];
+
+			return (
+				<article>
+					<h1>{articles[0].titulo} </h1>
+					<p>
+						{articles[0].body}
+					</p>
+					<span>Autor: {articles[0].autor}</span>
+					<br/>
+					<span>ID: {articles[0].id}</span>
+
+					</article>	
+
+			)
+			
+		}
 
 		ReactDOM.render(<App/>, document.getElementById("root"))
 	 </script>
